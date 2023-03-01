@@ -1,0 +1,169 @@
+/*Se definen dos variables personalizadas que se pueden utilizar en todo el documento.*/
+:root {
+  --color-fondo: #e6d9d7;
+  --color-letra: black;
+}
+
+/*Se agregan estilos para el elemento <body>*/
+body {
+  background-color: var(--color-fondo);
+  color: var(--color-letra);
+  transition: background-color 0.5s ease, color 0.5s ease; /* transición suave de 0.5 segundos para los cambios de color de fondo y de texto.*/
+  font-family: 'Quicksand', sans-serif;
+}
+
+/* Estilos para la página cuando se encuentra en Modo Oscuro.*/
+[data-tema="oscuro"] {
+  --color-fondo: #333333;
+  --color-letra: #ffffff;
+}
+
+/*Cambia el color del fondo del footer.*/
+[data-tema="oscuro"] #barra,[data-tema="oscuro"] #footer {
+  background-color: #2c2b2b;
+}
+
+[data-tema="oscuro"] #color-btn {
+  background-color: #2c2b2b;
+}
+
+[data-tema="oscuro"] button {
+  background-color: #2c2b2b; /*Color de fondo activo haciendo click en el boton.*/
+  color: black;
+}
+
+/*Se cambia el color y el tama;o del icono del boton.*/
+[data-tema="oscuro"] .fa-sun { 
+  color: white;
+  font-size: 160%;
+}
+
+[data-tema="oscuro"] #barra a {
+  color: var(--color-letra);
+}
+
+/*Estilos para la pagina en Modo Claro.*/
+.fa-moon {
+  font-size: 160%;
+}
+
+/*Se establece el estilo para la barra de navegación.*/
+nav {
+  display: flex;
+  justify-content: center;
+}
+
+nav a {
+  text-decoration: none;
+  font-weight: bold;
+  font-family: 'Exo 2', sans-serif;
+  color: black;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+}
+
+/*Se generan espacios entre los elementos de la barra de navegación,*/
+nav li {
+  margin: 0 10px; 
+}
+
+nav ul li:not(:last-child) a {
+  border-right: 2px solid gray;
+  padding-right: 6px;
+}
+  
+#barra {
+  background-color: #d3cac8;
+  color: black;
+}
+
+/*Cuando se pasa el cursor por los enlaces se cambia el color del texto a gris.*/
+#barra a:hover {
+  color: gray;
+}
+
+.fondo {
+  margin: 3%;
+  max-width: 100%;
+  height: auto;
+} 
+
+.fondo2 {
+  display: flex;
+  justify-content: start;  
+}
+
+#color-btn {
+  margin-left: 6%;
+  min-width: 4%;
+  cursor: pointer;
+  background-color: #d3cac8;
+}
+
+#foto {
+  display: block; /*Convierte la imagen en un elemento de bloque.*/
+  margin: 0 auto;
+  border-radius: 50%;
+  margin-top: 2%;
+  width: 19%;
+}
+
+#nombre {
+  text-align: center;
+}
+
+#padre {
+  display: flex;
+}
+  
+#hijo1,
+#hijo2 {
+  flex-basis: 50%;
+}
+
+#hijo2 {
+  max-width: 70%;
+}
+
+
+#infoSobreMi {
+  padding-left: 0;
+}
+
+.simbolos {
+  list-style: none;
+}
+
+/*Se definen estilos para el icono del scroll.*/
+#boton-scroll {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 999;
+  font-size: 24px;
+  color: #fff;
+  background-color: rgb(146, 144, 144);
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+}
+
+#boton-scroll:hover {
+  cursor: pointer;
+  background-color: #555;
+}
+
+#footer {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 10px;
+  background-color: #d3cac8;
+  font-family: 'Exo 2', sans-serif;
+}
